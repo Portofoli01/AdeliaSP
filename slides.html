@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Slide Portofolio — Adelia Setiawan Putri</title>
+<meta name="description" content="Presentasi portofolio Adelia Setiawan Putri, lulusan D3 Kebidanan Universitas Ipwija.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#232830;--muted:#5f6670;--rose:#a8505f;--deep:#7e3443;--blush:#f6e8ea;--line:#ebdce0;
+--serif:"Cormorant","Cormorant Garamond",Georgia,serif;--sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+--edge:#e2c9cf;--pad:clamp(20px,5vw,96px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:#fff;font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:8px}
+.deck{position:fixed;inset:0;height:100vh;height:100dvh;overflow:hidden}
+.track{display:flex;height:100%;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.slide{flex:0 0 100%;height:100%;overflow-y:auto;overflow-x:hidden;padding:calc(var(--pad)*.4 + 56px) var(--pad) calc(var(--pad)*.4 + 82px);display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2.6vh,40px);-webkit-overflow-scrolling:touch}
+.slide>*{flex-shrink:0}
+.slide.light{background:linear-gradient(135deg,#fff,#f3e6e9)}
+.slide.alt{background:#f7f6f8}
+.slide.dark{background:#232830;color:#fff}
+.slide.rose{background:linear-gradient(135deg,#7e3443,#a8505f);color:#fff}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.02}
+h1{font-size:clamp(46px,min(8.4vw,15vh),150px)}
+h1 i{display:block;color:var(--deep)}
+h2{font-size:clamp(36px,5.2vw,84px)}
+.dark h2,.rose h2{color:#fff}
+.eyebrow{font-size:clamp(15px,1.6vw,24px);font-weight:600;color:var(--rose)}
+.lead{font-size:clamp(17px,2vw,34px);line-height:1.4;color:var(--muted);max-width:30em}
+.rose .lead,.dark .lead{color:#f1dde1}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,90px);align-items:center}
+.stack{display:flex;flex-direction:column;gap:clamp(14px,2.4vh,30px)}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,3vw,52px)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,44px)}
+.card3d{background:linear-gradient(180deg,#fff,#f7f1f3);border:2px solid var(--line);border-radius:clamp(18px,2vw,28px);padding:clamp(18px,2.4vw,40px);box-shadow:0 clamp(6px,.8vw,14px) 0 var(--edge),0 clamp(18px,2.4vw,36px) clamp(24px,3vw,48px) rgba(126,52,67,.22);color:var(--ink)}
+.card3d h3{font-size:clamp(25px,2.8vw,46px);font-weight:600;color:var(--deep);margin-bottom:8px}
+.card3d .sub{font-weight:600;color:var(--rose);font-size:clamp(14px,1.45vw,24px);margin-bottom:8px}
+.card3d ul{padding-left:1.15em;font-size:clamp(15px,1.55vw,27px);line-height:1.5;color:var(--muted)}
+.card3d .yr{font-weight:600;color:var(--rose);font-size:clamp(14px,1.5vw,26px)}
+.stat b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(54px,7vw,120px);line-height:1;color:var(--deep)}
+.stat span{font-size:clamp(15px,1.6vw,28px);color:var(--muted)}
+.arch{position:relative;justify-self:center;width:min(100%,clamp(220px,32vw,560px));aspect-ratio:3/4;border-radius:999px 999px 28px 28px;background:#e8cdd3;box-shadow:0 clamp(10px,1.5vw,22px) 0 #d2a9b3,0 clamp(24px,3.4vw,50px) clamp(30px,4vw,70px) rgba(126,52,67,.35)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 80%;border-radius:inherit;display:block}
+.photo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:clamp(16px,2vw,28px);box-shadow:0 clamp(8px,1.2vw,18px) 0 #14171c,0 clamp(20px,2.8vw,40px) clamp(24px,3vw,60px) rgba(0,0,0,.5)}
+.tilt{transform:rotate(-2deg);box-shadow:0 clamp(8px,1.2vw,20px) 0 #b98795,0 clamp(20px,3vw,44px) clamp(26px,3.4vw,60px) rgba(126,52,67,.3)}
+figcaption{margin-top:clamp(14px,2vw,26px);font-size:clamp(14px,1.5vw,28px);color:#d9dce1}
+.social{display:flex;gap:clamp(14px,2.2vw,36px);align-items:center}
+.ico{display:block;width:clamp(48px,5.6vw,96px);aspect-ratio:54/58;filter:drop-shadow(0 10px 8px rgba(0,0,0,.28));transition:transform .25s cubic-bezier(.3,1.4,.5,1)}
+.ico:hover{transform:translateY(-6px) rotate(-4deg)}
+.ico svg{width:100%;height:100%;display:block}
+.pill{display:inline-block;background:#fff;color:var(--deep);font-weight:600;font-size:clamp(17px,2.1vw,36px);padding:clamp(12px,1.6vw,24px) clamp(20px,2.6vw,44px);border-radius:20px;text-decoration:none;box-shadow:0 clamp(6px,.8vw,12px) 0 #5e2531,0 clamp(16px,2vw,30px) clamp(20px,2.6vw,40px) rgba(0,0,0,.3);word-break:break-word}
+.contacts{display:flex;flex-direction:column;gap:clamp(14px,2vw,22px);align-items:flex-start}
+.row{display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:center}
+/* chrome */
+.top{position:fixed;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) clamp(16px,3vw,40px) 12px;z-index:5;pointer-events:none}
+.top>*{pointer-events:auto}
+.brand{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ink);text-decoration:none;background:rgba(255,255,255,.82);padding:6px 14px;border-radius:999px;backdrop-filter:blur(8px)}
+.tools{display:flex;gap:8px}
+.tbtn{background:rgba(255,255,255,.88);border:1px solid var(--line);color:var(--ink);height:44px;min-width:44px;padding:0 14px;border-radius:999px;font:600 14px var(--sans);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;backdrop-filter:blur(8px)}
+.tbtn:hover{background:#fff;border-color:var(--rose);color:var(--rose)}
+.tbtn svg{width:18px;height:18px}
+.bottom{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(16px,3vw,40px) calc(14px + env(safe-area-inset-bottom,0px));z-index:5;pointer-events:none}
+.bottom>*{pointer-events:auto}
+.nav{width:52px;height:52px;border-radius:50%;border:0;background:var(--rose);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 0 var(--deep),0 14px 20px rgba(126,52,67,.35);transition:transform .15s,box-shadow .15s}
+.nav:active{transform:translateY(4px);box-shadow:0 2px 0 var(--deep)}
+.nav:disabled{opacity:.35;cursor:default}
+.nav svg{width:22px;height:22px}
+.dots{display:flex;gap:8px;background:rgba(255,255,255,.85);padding:10px 14px;border-radius:999px;backdrop-filter:blur(8px)}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;background:#d8c3c8;cursor:pointer;padding:0;position:relative}
+.dots button::after{content:"";position:absolute;inset:-9px}
+.dots button[aria-current=true]{background:var(--rose);width:26px;border-radius:6px}
+@media (max-width:860px){
+ .split,.grid2,.grid3{grid-template-columns:1fr}
+ .arch{order:-1;width:min(62vw,260px)}
+ .brand{font-size:17px}
+ .tbtn span{display:none}
+ .slide{justify-content:flex-start;padding-top:calc(76px + env(safe-area-inset-top,0px))}
+}
+@media (max-height:520px) and (orientation:landscape){
+ .slide{justify-content:flex-start}
+ h1{font-size:44px}
+}
+@media (prefers-reduced-motion:reduce){.track{transition:none}}
+@media print{html,body{overflow:visible;height:auto}.deck{position:static;height:auto}.track{display:block;transform:none!important}.slide{height:auto;min-height:100vh;page-break-after:always}.top,.bottom{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="gIg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient>
+<linearGradient id="gIgD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a21c5c"/><stop offset="1" stop-color="#5a1346"/></linearGradient>
+<linearGradient id="gFb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a8df0"/><stop offset="1" stop-color="#1664d8"/></linearGradient>
+<linearGradient id="gFbD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f4bb0"/><stop offset="1" stop-color="#0a2f73"/></linearGradient>
+<linearGradient id="gLi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d9be0"/><stop offset="1" stop-color="#0a66c2"/></linearGradient>
+<linearGradient id="gLiD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#064c91"/><stop offset="1" stop-color="#042f5c"/></linearGradient>
+<linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<symbol id="sym-ig" viewBox="0 0 54 58"><rect x="1" y="9" width="52" height="46" rx="14" fill="url(#gIgD)"/><rect x="1" y="1" width="52" height="48" rx="14" fill="url(#gIg)"/><rect x="1" y="1" width="52" height="24" rx="14" fill="url(#gloss)"/><g fill="none" stroke="#fff" stroke-width="3.2"><rect x="13" y="13" width="28" height="28" rx="8.5"/><circle cx="27" cy="27" r="6.6"/></g><circle cx="35.2" cy="18.8" r="2" fill="#fff"/></symbol><symbol id="sym-fb" viewBox="0 0 54 58"><rect x="1" y="9" width="52" height="46" rx="14" fill="url(#gFbD)"/><rect x="1" y="1" width="52" height="48" rx="14" fill="url(#gFb)"/><rect x="1" y="1" width="52" height="24" rx="14" fill="url(#gloss)"/><path fill="#fff" d="M29.5 44V28h5l.8-6h-5.8v-3.7c0-1.7.5-2.9 3-2.9H36V10c-.5-.1-2.4-.2-4.5-.2-4.4 0-7.5 2.7-7.5 7.7V22h-5v6h5v16z"/></symbol><symbol id="sym-li" viewBox="0 0 54 58"><rect x="1" y="9" width="52" height="46" rx="14" fill="url(#gLiD)"/><rect x="1" y="1" width="52" height="48" rx="14" fill="url(#gLi)"/><rect x="1" y="1" width="52" height="24" rx="14" fill="url(#gloss)"/><g fill="#fff"><circle cx="16.5" cy="15.8" r="3.6"/><rect x="13.2" y="21.8" width="6.6" height="18.4" rx="1"/><path d="M23.4 21.8h6.3v2.6c1.1-1.9 3.2-3.1 6-3.1 5.4 0 6.6 3.6 6.6 8.3v10.6h-6.6v-9.4c0-2.2-.1-4.4-2.8-4.4s-3 2-3 4.3v9.5h-6.5z"/></g></symbol></defs></svg>
+
+<div class="top">
+  <a class="brand" href="index.html" title="Kembali ke portofolio">Adelia S. Putri</a>
+  <div class="tools">
+    <a class="tbtn" href="assets/CV-Adelia-Setiawan-Putri.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg><span>Unduh CV</span></a>
+    <button class="tbtn" id="fs" type="button" aria-label="Layar penuh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>Layar penuh</span></button>
+  </div>
+</div>
+
+<main class="deck" id="deck" aria-roledescription="carousel" aria-label="Slide portofolio">
+<div class="track" id="track">
+
+<section class="slide light" aria-roledescription="slide" aria-label="1 dari 7: Cover">
+  <div class="split">
+    <div class="stack">
+      <p class="eyebrow">Portofolio bidan</p>
+      <h1>Adelia<i>Setiawan Putri</i></h1>
+      <p class="lead">Lulusan D3 Kebidanan Universitas Ipwija, IPK 3,51</p>
+      <div class="social"><a class="ico" href="https://www.instagram.com/adlstwnptri?utm_source=qr&amp;mdxt=bTQ2azBuaGVycmNv" target="_blank" rel="noopener" aria-label="Instagram Adelia"><svg viewBox="0 0 54 58"><use href="#sym-ig"/></svg></a><a class="ico" href="https://www.facebook.com/adel.ii.7315" target="_blank" rel="noopener" aria-label="Facebook Adelia"><svg viewBox="0 0 54 58"><use href="#sym-fb"/></svg></a><a class="ico" href="https://www.linkedin.com/in/adelia-putri-0a63ab249?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn Adelia"><svg viewBox="0 0 54 58"><use href="#sym-li"/></svg></a></div>
+    </div>
+    <div class="arch"><img src="assets/img/adelia-portrait.jpg" alt="Potret Adelia Setiawan Putri mengenakan seragam merah muda"></div>
+  </div>
+</section>
+
+<section class="slide" aria-roledescription="slide" aria-label="2 dari 7: Tentang saya">
+  <h2>Tentang saya</h2>
+  <div class="split">
+    <div class="stack">
+      <p class="lead" style="color:var(--ink)">Lulusan D3 Kebidanan dengan pengalaman praktik di puskesmas, rumah sakit, dan komunitas.</p>
+      <p class="lead">Komunikasi terapeutik yang baik, nyaman bekerja dalam tim multidisiplin, dan memegang teguh standar keselamatan serta etika.</p>
+    </div>
+    <div class="stack" style="gap:clamp(22px,3.4vw,52px)">
+      <div class="card3d stat"><b>3,51</b><span>IPK D3 Kebidanan</span></div>
+      <div class="card3d stat"><b>3</b><span>Lokasi praktik klinik</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide alt" aria-roledescription="slide" aria-label="3 dari 7: Kompetensi">
+  <h2>Kompetensi</h2>
+  <div class="grid2">
+    <article class="card3d"><h3>Asuhan kebidanan</h3><ul><li>Pemeriksaan kehamilan (ANC)</li><li>Asuhan nifas dan bayi baru lahir</li><li>Membantu persalinan, imunisasi</li></ul></article>
+    <article class="card3d"><h3>Keluarga berencana</h3><ul><li>KB suntik</li><li>Pemasangan IUD</li><li>Implan dan konseling KB</li></ul></article>
+    <article class="card3d"><h3>Tindakan klinis dasar</h3><ul><li>Tanda vital, GDS, perawatan luka</li><li>Injeksi, infus, kateter urin, NGT</li><li>Pemeriksaan awal di IGD</li></ul></article>
+    <article class="card3d"><h3>Edukasi dan dokumentasi</h3><ul><li>Konseling dan komunikasi empatik</li><li>Pencatatan rekam medis</li><li>Microsoft Word, Excel, PowerPoint</li></ul></article>
+  </div>
+  <p class="lead" style="font-size:clamp(14px,1.3vw,22px)">Semua tindakan dilakukan sesuai kompetensi dan kewenangan, di bawah arahan pembimbing klinik.</p>
+</section>
+
+<section class="slide" aria-roledescription="slide" aria-label="4 dari 7: Pengalaman praktik">
+  <h2>Pengalaman praktik</h2>
+  <div class="grid3">
+    <article class="card3d"><h3>Puskesmas Cileungsi</h3><p class="sub">Klinik dan komunitas</p><ul><li>Asuhan ibu hamil dan konseling</li><li>Kebidanan komunitas di Desa Dayeuh</li><li>Edukasi ibu, anak, dan remaja</li></ul></article>
+    <article class="card3d"><h3>RSUD RH Satibi</h3><p class="sub">Praktik klinik</p><ul><li>Tanda vital dan gula darah</li><li>Perawatan luka pasca operasi caesar</li><li>Injeksi, infus, kateter, NGT</li></ul></article>
+    <article class="card3d"><h3>Puskesmas Ciawi</h3><p class="sub">KIA, KB, dan IGD</p><ul><li>ANC, nifas, bayi baru lahir</li><li>KB suntik, IUD, implan</li><li>Pemeriksaan awal di IGD</li></ul></article>
+  </div>
+</section>
+
+<section class="slide alt" aria-roledescription="slide" aria-label="5 dari 7: Pendidikan">
+  <h2>Pendidikan</h2>
+  <div class="split">
+    <div class="stack" style="gap:clamp(22px,3.4vw,56px)">
+      <article class="card3d"><p class="yr">2023 – 2026</p><h3>Universitas Ipwija</h3><ul style="list-style:none;padding:0"><li>D3 Kebidanan, IPK 3,51</li></ul></article>
+      <article class="card3d"><p class="yr">2019 – 2022</p><h3>SMK Nurul Hikmah</h3><ul style="list-style:none;padding:0"><li>Teknik Komputer dan Jaringan</li></ul></article>
+    </div>
+    <img class="photo tilt" src="assets/img/praktik-komunitas.jpg" alt="Foto bersama peserta Praktik Kebidanan Komunitas di Desa Dayeuh" loading="lazy">
+  </div>
+</section>
+
+<section class="slide dark" aria-roledescription="slide" aria-label="6 dari 7: Kegiatan">
+  <h2>Kegiatan</h2>
+  <div class="grid2">
+    <figure><img class="photo" src="assets/img/rsud-cileungsi.jpg" alt="Foto bersama rekan praktik di depan RSUD Cileungsi" loading="lazy"><figcaption>Bersama rekan praktik di RSUD Cileungsi</figcaption></figure>
+    <figure><img class="photo" src="assets/img/praktik-komunitas.jpg" alt="Foto bersama peserta Praktik Kebidanan Komunitas" loading="lazy"><figcaption>Praktik Kebidanan Komunitas, Desa Dayeuh</figcaption></figure>
+  </div>
+</section>
+
+<section class="slide rose" aria-roledescription="slide" aria-label="7 dari 7: Kontak">
+  <h2 style="font-size:clamp(40px,7vw,110px)">Mari berkenalan</h2>
+  <p class="lead">Terbuka untuk bekerja di klinik, puskesmas, atau rumah sakit.</p>
+  <div class="row">
+    <div class="contacts">
+      <a class="pill" href="mailto:ladel7106@gmail.com">ladel7106@gmail.com</a>
+      <a class="pill" href="https://wa.me/62895332529830" target="_blank" rel="noopener">0895-3325-29830</a>
+    </div>
+    <div class="social"><a class="ico" href="https://www.instagram.com/adlstwnptri?utm_source=qr&amp;mdxt=bTQ2azBuaGVycmNv" target="_blank" rel="noopener" aria-label="Instagram Adelia"><svg viewBox="0 0 54 58"><use href="#sym-ig"/></svg></a><a class="ico" href="https://www.facebook.com/adel.ii.7315" target="_blank" rel="noopener" aria-label="Facebook Adelia"><svg viewBox="0 0 54 58"><use href="#sym-fb"/></svg></a><a class="ico" href="https://www.linkedin.com/in/adelia-putri-0a63ab249?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn Adelia"><svg viewBox="0 0 54 58"><use href="#sym-li"/></svg></a></div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<div class="bottom">
+  <button class="nav" id="prev" type="button" aria-label="Slide sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="dots" id="dots" role="tablist" aria-label="Pilih slide"></div>
+  <button class="nav" id="next" type="button" aria-label="Slide berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script>
+(function(){
+  var track=document.getElementById('track'),slides=[].slice.call(track.children),n=slides.length,i=0;
+  var prev=document.getElementById('prev'),next=document.getElementById('next'),dots=document.getElementById('dots');
+  slides.forEach(function(s,k){
+    var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-label','Slide '+(k+1));
+    b.addEventListener('click',function(){go(k)});dots.appendChild(b);
+  });
+  function go(k){
+    i=Math.max(0,Math.min(n-1,k));
+    track.style.transform='translateX(-'+(i*100)+'%)';
+    slides.forEach(function(s,j){if(j===i){s.removeAttribute('inert');s.removeAttribute('aria-hidden');s.scrollTop=0}else{s.setAttribute('inert','');s.setAttribute('aria-hidden','true')}});
+    [].forEach.call(dots.children,function(b,j){b.setAttribute('aria-current',j===i);b.setAttribute('aria-selected',j===i)});
+    prev.disabled=i===0;next.disabled=i===n-1;
+    try{history.replaceState(null,'','#'+(i+1))}catch(e){}
+  }
+  prev.addEventListener('click',function(){go(i-1)});next.addEventListener('click',function(){go(i+1)});
+  document.addEventListener('keydown',function(e){
+    if(e.target.closest&&e.target.closest('input,textarea'))return;
+    if(['ArrowRight','PageDown'].indexOf(e.key)>-1||(e.key===' '&&!e.shiftKey&&e.target===document.body)){e.preventDefault();go(i+1)}
+    else if(['ArrowLeft','PageUp'].indexOf(e.key)>-1||(e.key===' '&&e.shiftKey)){e.preventDefault();go(i-1)}
+    else if(e.key==='Home')go(0);else if(e.key==='End')go(n-1);
+  });
+  var x0=null,y0=null;
+  track.addEventListener('touchstart',function(e){var t=e.touches[0];x0=t.clientX;y0=t.clientY},{passive:true});
+  track.addEventListener('touchend',function(e){
+    if(x0===null)return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
+    if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(dx<0?i+1:i-1);
+  },{passive:true});
+  var fs=document.getElementById('fs');
+  if(!document.documentElement.requestFullscreen){fs.style.display='none'}
+  fs.addEventListener('click',function(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen()});
+  var h=parseInt(location.hash.slice(1),10);go(h>0?h-1:0);
+})();
+</script>
+</body>
+</html>
